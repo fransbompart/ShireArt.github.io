@@ -1,0 +1,221 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    color: #2A495A;
+    list-style: none;
+    line-height: 1.5em;
+}
+
+html{
+    background-color: bisque;
+    background-size: cover;
+    padding: auto;
+}
+
+img{
+    border: 3px solid #DD6761;
+}
+
+.header2 nav ul li a.active{
+    background-color: #2a495a;
+    color: bisque;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.header1{
+    grid-area: header1;
+    background-color: #DD6761;
+    display: flex;
+    justify-content: right;
+}
+    
+.header1 h1{
+    font-size: 2rem;
+    color: white;
+    word-wrap: normal;
+    margin: 67px 5% 0 0;
+}
+
+.header1 .logo{
+    border: none;
+    width: 22%;
+    min-width: 100px;
+    max-width: 180px;
+    object-fit: contain;
+    position: absolute;
+    left: 1.5%;
+    top: 1.5%;
+}
+
+.header2{
+    grid-area: header2;
+    background-color: #6fb161; 
+    display: flex;   
+    align-items: center;
+}
+
+.header2 nav{
+    display: flex;
+    width: 100%;
+}
+
+.header2 nav ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-left: 20%;
+}
+
+.header2 nav ul a{
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 3px solid #DD6761;
+    border-radius: 50em;
+    color: #2A495A;
+    background-color: #f19c2d;
+    padding: 0.5rem 1rem;
+}
+
+#menu{
+    display: none;
+}
+
+@media screen and (max-width: 850px){ 
+    .header1 h1{
+        font-size: 1.8rem;
+        margin-top: 54px;
+    }
+
+    .header1 .logo{
+        width: 20%;
+    }
+
+    .header2 nav ul{
+        padding-left: 19%;
+    }
+
+    .header2 nav ul a{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 760px){      
+    .header1 h1{
+        font-size: 1.5rem;
+        margin-top: 44px;
+    }
+
+    .header1 .logo {
+        width: 19%;
+    }
+
+    .header2 nav ul{
+        padding-left: 18%;
+    }
+} 
+
+@media screen and (max-width:600px){
+    .header1 .logo{
+        max-height: 85px;
+        top: 1%;
+        left: 2%
+    }
+
+    .header1 h1{
+        font-size: 100%;
+        margin: 22px 3% 0 0;
+        padding-left: 35%;
+    }
+
+    #menu{
+        display: block;
+        font-size: 0.7rem;
+        font-weight: bold;
+        border: 2px solid #2A495A;
+        border-radius: 50em;
+        color: #DD6761;
+        background-color: #F2A950;
+        padding: 0.2rem 0.9rem;
+        position: relative;
+        right: 2%;
+    }
+
+    .header2 nav ul{
+        position: absolute;
+        top: 93px;
+        right: -100%;
+        width: 30%;
+        height: 175px;
+        background-color: #F2A950;
+        border: 2px solid #2A495A;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 20px;
+    }
+
+    .header2 nav ul.open{
+        right: 2%;
+    }
+
+    .header2 nav ul a {
+        color: #DD6761;
+        display: block;
+        margin-left: -165%;
+        padding: 9px 25%;
+        transition: all .50s ease;
+        font-size: 0.7rem;
+        background-color: transparent;
+        border: 0px;
+    }
+
+    .header2 nav ul li a.active{
+        background-color: transparent;
+        border: none;
+        color: #2a495a;
+    }
+}
+
+@media screen and (max-width:330px) {
+    img{
+        border: 2px solid #DD6761;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .header1 .logo{
+        min-width: 70px;
+        top: 2%;
+        left: 2.5%;
+    }
+
+    .header1 h1{
+        font-size: 90%;
+        padding-left: 28%;
+    }
+
+    #menu{
+        font-size: 0.5rem;
+        padding: 0.15rem 0.63rem;
+    }
+
+    .header2 nav ul{
+        top: 83px;
+        right: -100%;
+        width: 37%;
+        height: 124px;
+    }
+
+    .header2 nav ul a {
+        margin-left: -145%;
+        padding: 6.2px 65%;
+        transition: all .50s ease-out;
+        font-size: 0.5rem
+    }
+}

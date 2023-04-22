@@ -1,0 +1,96 @@
+#site_wrap{
+    display: grid;
+    grid-template-columns:  
+        1fr 
+        repeat(3,minmax(0,430px))
+        1fr;
+    grid-gap: 5px;
+    grid-template-rows:
+        max-content
+        104px
+        max-content;
+    grid-template-areas:
+        "header1 header1 header1 header1 header1"
+        "header2 header2 header2 header2 header2"
+        ". about about about .";
+}
+
+.about{
+    grid-area: about;
+    margin-top: 5%;
+}
+
+.about img{
+    float: right;
+    margin: auto 2% 1%;  
+    width: 40%;
+}
+
+.about p{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 2%;
+    margin-left: 2%;  
+}
+
+@media screen and (max-width:850px) {
+    #site_wrap{
+        grid-template-rows:
+            max-content
+            90px
+            max-content;
+    }
+
+    .about p{
+        font-size: 0.8rem;     
+    }    
+}
+
+@media screen and (max-width:760px) {
+    #site_wrap{
+        grid-template-rows: 
+            max-content
+            80px
+            max-content;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #site_wrap{ 
+        grid-template-rows: 
+        max-content
+        50px
+        max-content;
+    }
+
+    .about p{
+        font-size: 0.8rem; 
+    }
+}
+
+@media screen and (max-width:480px) {
+    .about p{
+        font-size: 0.6rem; 
+    }
+}
+
+@media screen and (max-width:320px) {
+    .about p{
+        font-size: 0.5rem; 
+    }
+}
+
+@media screen and (max-width:280px) {
+    .about p{
+        font-size: 0.3rem; 
+    }
+}
+
+@media screen and (max-width:300px){    
+    #site_wrap{ 
+        grid-template-rows: 
+            max-content
+            40px
+            max-content;      
+    }
+}

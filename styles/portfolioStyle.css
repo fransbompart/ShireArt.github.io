@@ -1,0 +1,244 @@
+#site_wrap{
+    display: grid;
+    grid-template-columns:  
+        1fr 
+        repeat(3,minmax(0,600px))
+        1fr;
+    grid-gap: 5px;
+    grid-template-rows:
+        max-content
+        104px
+        repeat(10,max-content);
+    grid-template-areas:
+        "header1 header1 header1 header1 header1"
+        "header2 header2 header2 header2 header2"
+        ". portraitsTitle portraitsTitle portraitsTitle ."
+        ". portraits portraits portraits ."
+        ". animalsTitle animalsTitle animalsTitle ."
+        ". animals animals animals ."
+        "landscapeTitle landscapeTitle landscapeTitle landscapeTitle landscapeTitle"
+        ". landscape landscape landscape ."
+        "ilustrationsTitle ilustrationsTitle ilustrationsTitle ilustrationsTitle ilustrationsTitle"
+        ". ilustrations ilustrations ilustrations ."
+        "objectsTitle objectsTitle objectsTitle objectsTitle objectsTitle"
+        ". objects objects objects .";
+}
+
+.portraitsTitle{
+    grid-area: portraitsTitle;
+}
+
+.portraits{
+    grid-area: portraits;
+}
+
+.animalsTitle{
+    grid-area: animalsTitle;
+}
+
+.animals{
+    grid-area: animals;
+}
+
+.landscape{
+    grid-area: landscape;
+}
+
+.landscapeTitle{
+    grid-area: landscapeTitle;
+}
+
+.ilustrations{
+    grid-area: ilustrations;
+}
+
+.ilustrationsTitle{
+    grid-area: ilustrationsTitle;
+}
+
+.objectsTitle{
+    grid-area: objectsTitle;
+}
+
+.objects{
+    grid-area: objects;
+}
+
+.portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
+    letter-spacing: 0.5rem;
+    text-align: center;
+    margin: 2% auto;
+}
+
+.portraits, .animals, .landscape, .ilustrations, .objects{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0px, 400px));
+    row-gap: 8px;
+    place-self: center;
+}
+
+.grid-item{
+    display: flex;
+}
+
+.grid-item img{
+    width: 65%;
+    display: block;
+    margin: auto;
+    align-self: center;
+}
+
+.tall{
+    grid-row: span 2;
+    display: block;
+    margin: auto;
+    align-self: center;
+}
+
+.wide{
+    grid-column: span 2;
+    justify-content: center;
+}
+
+.wide img{
+    width: 76%;
+}
+
+img.wideImg2{
+    position: relative;
+    top: 8%;
+    width: 80%;
+}
+
+.grid-item p{
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    place-self: center;
+    margin: auto 2%;
+}
+
+.dobleText{
+    display: inline-block;
+    align-self: center;
+    margin: auto -9%;
+}
+
+p.text {
+    margin: auto;
+}
+
+@media screen and (max-width:965px){
+    p.text{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width:850px) {
+    #site_wrap{
+        grid-template-rows:
+            max-content
+            90px
+            repeat(10,max-content);
+    }
+
+    .grid-item p{
+        font-size: 1.2rem;       
+    } 
+
+    .grid-item p.text{
+        font-size: 1rem;
+    }
+
+    .portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width:760px) {
+    #site_wrap{
+        grid-template-rows: 
+            max-content
+            80px
+            repeat(10,max-content);
+    }
+
+    .grid-item p{
+        font-size: 1rem;       
+    }
+
+    .grid-item p.text{
+        font-size: 0.9rem;
+    }
+
+    .portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #site_wrap{ 
+        grid-template-rows: 
+            max-content
+            50px
+            repeat(10,max-content);
+    }
+
+    .grid-item p{
+        font-size: 0.7rem; 
+        margin: auto;      
+    }    
+
+    .grid-item p.text{
+        font-size: 0.6rem;
+    }
+
+    .portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
+        font-size: 1.1rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .grid-item p.text, .grid-item p{
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width:330px) {   
+    .portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:300px) {   
+    #site_wrap{ 
+        grid-template-rows: 
+            max-content
+            40px
+            max-content;      
+    }
+}
+
+@media screen and (max-width:276px) {   
+    .portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
+        font-size: 0.7rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .grid-item p.text{
+        font-size: 0.3rem;
+    }
+
+    .grid-item p{
+        font-size: 0.4rem;
+    }
+}
+
+
+
+

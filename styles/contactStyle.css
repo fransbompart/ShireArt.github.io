@@ -1,0 +1,239 @@
+#site_wrap{
+    display: grid;
+    grid-template-columns:  
+        1fr 
+        repeat(3,minmax(0,300px))
+        1fr;
+    grid-gap: 5px;
+    grid-template-rows:
+        max-content
+        104px
+        max-content;
+    grid-template-areas:
+        "header1 header1 header1 header1 header1"
+        "header2 header2 header2 header2 header2"
+        ". contact contact contact .";
+}
+
+.contact{
+    grid-area: contact;
+    margin-top: 2%;
+}
+
+.contact li{
+    display: flex;
+    margin: 10% 2% 17%;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0px,300px));
+    place-content: center;
+}
+
+.contact h1{
+    text-align: center;
+    letter-spacing: 0.5rem; 
+    font-size: 2.5rem; 
+    margin-top: 2%;
+}
+
+h2{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    color: #DD6761;
+    text-align: center;
+}
+
+.icon{
+    max-width: 70px;
+    border: none;
+    margin-right: 4%;
+}
+
+.instagram{
+    max-width: 110px;
+    width: 60%;
+    border: none;
+    position: relative;
+    top: -2.3rem;
+    right: 2.2rem;
+}
+
+.contact .info ul li a{
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-self: center;
+}
+
+.contact .info ul li a:hover{
+    color: #DD6761;
+}
+
+a.text{
+    position: relative;
+    bottom: 1.1rem;
+    right: 1.8rem;
+}
+
+li.special{
+    margin-bottom: -8%;
+}
+
+@media screen and (max-width:850px) {
+    #site_wrap{
+        grid-template-rows:
+            max-content
+            90px
+            max-content;
+    }
+
+    .contact h1{
+        font-size: 2.4rem;
+    }
+    
+    h2{
+        font-size: 1.4rem;
+    }   
+}
+
+@media screen and (max-width:760px) {
+    #site_wrap{
+        grid-template-rows: 
+            max-content
+            80px
+            max-content;
+    }
+
+    .contact h1{
+        font-size: 2.3rem;
+    }
+    
+    .contact .info ul li a{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .contact h1{
+        font-size: 1.6rem;
+    }
+
+    h2{
+        font-size: 1.1rem;
+        margin: 4% auto;
+    }  
+
+    .info{
+        grid-template-columns: repeat(2,minmax(0px,140px))
+    }
+
+    .contact .info ul li a{
+        font-size: 0.7rem;
+    }
+    
+    .icon{
+        width: 40%;
+        margin-right: 4%;
+    }
+
+    .instagram {
+        right: 1.8rem;
+        bottom: 1%;
+        top: -1.7rem;
+    }
+
+    li.special{
+        margin-bottom: -15%;
+    }
+
+    a.text{
+        right: 1.5rem;
+    }        
+}
+
+@media screen and (max-width:600px) {
+    #site_wrap{ 
+        grid-template-rows: 
+            max-content
+            50px
+            max-content;
+        grid-gap: 5px;
+    }
+}
+
+@media screen and (max-width:410px) {
+    .contact h1{
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+    }
+    
+    h2{
+        font-size: 0.7rem;
+    }  
+
+    .contact .info ul li a{
+        font-size: 0.6rem;
+    }
+    
+    .icon{
+        width: 25%;
+        margin-right: 2%;
+    }
+
+    .instagram {
+        right: 0.9rem;
+        width: 35%;
+        top: -1.2rem;
+    }
+
+    li.special{
+        margin-bottom: -5%;
+    }
+
+    a.text{
+        right: 0.7rem;
+        top: -0.6rem;
+    }     
+}
+
+@media screen and (max-width:300px){    
+    #site_wrap{ 
+        grid-template-rows: 
+            max-content
+            40px
+            max-content;      
+    }
+
+    .contact h1{
+        font-size: 0.85rem;
+    }
+
+    h2{
+        font-size: 0.55rem;
+    }  
+
+    .contact .info ul li a{
+        font-size: 0.45rem;
+    }
+
+    .info{
+        grid-template-columns: repeat(2,minmax(0px,100px))
+    }
+
+    .instagram {
+        right: 0.7rem;
+        width: 35%;
+        top: -0.8rem;
+    }
+
+    li.special{
+        margin-bottom: -8%;
+    }
+
+    a.text{
+        right: 0.5rem;
+    }  
+}
+
+

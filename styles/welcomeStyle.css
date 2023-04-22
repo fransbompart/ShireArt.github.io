@@ -1,0 +1,271 @@
+#site_wrap{
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: 
+        1fr  
+        repeat(4,minmax(0,300px))
+        1fr;
+    grid-gap: 5px;
+    grid-template-rows: 
+        max-content
+        104px
+        max-content;
+    grid-template-areas:
+        "header1 header1 header1 header1 header1 header1"
+        "header2 header2 header2 header2 header2 header2"
+        ". image1 welcome welcome image2 ."
+        ". artworkText artwork1 artwork1 artwork1 ."
+        ". artwork2 artwork2 artwork2 artwork2 .";
+    place-content: center;
+    max-height: max-content;
+}
+
+.image1, .image2{
+    place-self: center;
+    margin-top: 8%;
+    width: 90%;;
+}
+
+.image1{
+    grid-area: image1;
+}
+
+.image2{
+    grid-area: image2;
+}
+
+.welcome{
+    grid-area: welcome;
+    display: flex;
+    align-items: center;
+}
+
+.welcome .welcomeItems h1{
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 8%;
+}
+
+.welcome .welcomeItems p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 5% 5%;
+}
+
+.artworkText{
+    grid-area: artworkText;
+    display: flex;
+    align-items: center;
+}
+
+.artworkTextItems p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 8% 20%;
+    color: #DD6761
+}
+
+.artwork1{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0px,300px));
+    grid-area: artwork1;
+    margin: 1% auto;
+    place-content: center;
+}
+
+.artwork2{
+    grid-area: artwork2;
+    margin-bottom: 1%;
+}
+
+.artwork1 img, .artwork2Img img{
+    width: 90%;
+    place-self: center;
+}
+
+.artwork2 .artwork2Img{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0px,300px));
+    place-content: center;
+    margin-bottom: 1%;
+}
+
+.artworkText .artworkTextItems a, .artwork2 a{
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 3px solid #DD6761;
+    border-radius: 50em;
+    color: #DD6761;
+    background-color: #80A66C;
+    padding: 0.3rem 1rem;
+    width: min-content;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+.artworkText .artworkTextItems a:active, .artwork2 a:active{
+    background-color: #DD6761;
+    color: #2A495A;
+    border: 3px solid #80A66C;
+}
+
+@media screen and (max-width: 850px){ 
+    #site_wrap{ 
+        grid-template-rows:
+        max-content
+        90px
+        max-content;
+    }
+    
+    .welcome .welcomeItems h1{
+        font-size: 1.7rem;
+        margin-bottom: 6%;
+    }
+
+    .welcome .welcomeItems p{
+        font-size: 1rem;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .artworkTextItems p{
+        font-size: 1rem;
+    }
+
+    .artworkText .artworkTextItems a, .artwork2 a{
+        font-size: 1rem;
+        padding: 0.3rem 0.7rem;
+    }
+}
+
+@media screen and (max-width: 760px){  
+    #site_wrap{
+        grid-template-rows:
+            max-content
+            80px
+            max-content;
+    }
+
+    .welcome .welcomeItems h1{
+        font-size: 1.5rem;
+        margin-bottom: 5%;
+    }
+
+    .welcome .welcomeItems p{
+        font-size: 0.9rem;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .artworkTextItems p{
+        font-size: 0.9rem;
+        margin: 7% auto;
+    }
+
+    .artworkText .artworkTextItems a, .artwork2 a{
+        font-size: 0.9rem;
+    }
+} 
+
+@media screen and (max-width:600px){
+    #site_wrap{ 
+        grid-template-rows: 
+            max-content
+            50px
+            max-content;
+        grid-template-columns: 
+            1fr  
+            repeat(3,minmax(0,300px))
+            1fr;
+        grid-template-areas:
+            "header1 header1 header1 header1 header1"
+            "header2 header2 header2 header2 header2"
+            "image1 image1 welcome welcome welcome"
+            "artwork1 artwork1 artwork1 artwork1 artwork1"
+            "artworkText artworkText artworkText artworkText artworkText"
+            "artwork2 artwork2 artwork2 artwork2 artwork2";         
+    }
+
+    .image1{
+        max-width: 180px;;
+    }
+
+    .image2{
+        display: none;
+    }
+
+    .welcome .welcomeItems h1{
+        font-size: 1.1rem;
+        margin-bottom: 2%;
+    }
+
+    .welcome .welcomeItems p{
+        font-size: 0.8rem;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .artworkText .artworkTextItems{
+        display: flex;
+        align-items: center;
+    }
+
+    .artworkText .artworkTextItems p{
+        margin: 8% 5%;
+    }
+
+    .artworkText .artworkTextItems a, .artwork2 a{
+        position: relative;
+        right: 2%;
+    }
+}
+
+@media screen and (max-width:430px){
+    .welcome .welcomeItems h1{
+        font-size: 1rem;
+    }
+
+    .welcome .welcomeItems p{
+        font-size: 0.65rem;
+    }
+
+    .artworkText .artworkTextItems p{
+        font-size: 0.7rem;
+    }
+
+    .artworkText .artworkTextItems a, .artwork2 a{
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+@media screen and (max-width:300px){    
+    #site_wrap{ 
+        grid-template-rows: 
+            max-content
+            40px
+            max-content;      
+    }
+    
+    .welcome .welcomeItems h1{
+        font-size: 0.9rem;
+    }
+
+    .welcome .welcomeItems p{
+        font-size: 0.5rem;
+    }
+
+    .artworkText .artworkTextItems p{
+        font-size: 0.5rem;
+    }
+
+    .artworkText .artworkTextItems a, .artwork2 a{
+        font-size: 0.5rem;
+        padding: 0.2rem 0.4rem;
+        border: 2px solid #DD6761;
+    }
+}
+
