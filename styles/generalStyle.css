@@ -17,6 +17,11 @@ html{
 
 img{
     border: 3px solid #DD6761;
+    transition: all 300ms;
+}
+
+img:hover{
+    transform: scale(104%);
 }
 
 .header2 nav ul li a.active{
@@ -32,14 +37,14 @@ body{
     grid-area: header1;
     background-color: #DD6761;
     display: flex;
-    justify-content: right;
+    justify-content: center;
 }
     
 .header1 h1{
     font-size: 2rem;
     color: white;
     word-wrap: normal;
-    margin: 67px 5% 0 0;
+    margin: 67px 0 0 4%;
 }
 
 .header1 .logo{

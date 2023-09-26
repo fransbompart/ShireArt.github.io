@@ -73,7 +73,7 @@
 .portraits, .animals, .landscape, .ilustrations, .objects{
     display: grid;
     grid-template-columns: repeat(3, minmax(0px, 400px));
-    row-gap: 8px;
+    row-gap: 1rem;
     place-self: center;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .grid-item img{
-    width: 65%;
+    width: 60%;
     display: block;
     margin: auto;
     align-self: center;
