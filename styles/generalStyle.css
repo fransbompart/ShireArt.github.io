@@ -58,6 +58,10 @@ body{
     top: 0.8rem;
 }
 
+.header1 .logo:hover{
+    transform: none;
+}
+
 .header2{
     grid-area: header2;
     background-color: #6fb161; 
@@ -103,6 +107,7 @@ body{
 
     .header2 nav ul a{
         font-size: 0.9rem;
+        padding: 0.45rem 0.72rem;
     }
 }
 
@@ -118,14 +123,13 @@ body{
 
     .header2 nav ul a{
         font-size: 0.83rem;
-        padding: 0.48rem 0.72rem;
     }
 } 
 
 @media screen and (max-width:600px){
     .header1 .logo{
-        max-height: 85px;
-        top: 0.6rem;
+        max-height: 80px;
+        top: 0.7rem;
         left: 2%
     }
 
@@ -187,10 +191,10 @@ body{
     }
 
     #menu{
-        font-size: 0.6rem;
+        font-size: 0.58rem;
         font-weight: bold;
         border: 2px solid #2A495A;
-        padding: 0.18rem 0.9rem;
+        padding: 0.18rem 0.76rem;
     }
 
     .header1 h1{
@@ -200,9 +204,9 @@ body{
 
 @media screen and (max-width:300px) {
     .header1 .logo{
-        min-width: 70px;
-        top: 0.5rem;
-        left: 2.5%;
+        min-width: 65px;
+        top: 0.65rem;
+        left: 0.9rem;
     }
 
     .header1 h1{

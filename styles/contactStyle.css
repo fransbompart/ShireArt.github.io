@@ -157,7 +157,7 @@ a.text{
     #site_wrap{ 
         grid-template-rows: 
             max-content
-            50px
+            48px
             max-content;
         grid-gap: 5px;
     }
@@ -198,7 +198,7 @@ a.text{
     #site_wrap{ 
         grid-template-rows: 
             max-content
-            40px
+            38px
             max-content;      
     }
 

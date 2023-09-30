@@ -180,7 +180,7 @@ p.text {
     #site_wrap{ 
         grid-template-rows: 
             max-content
-            50px
+            48px
             repeat(10,max-content);
     }
 
@@ -219,7 +219,7 @@ p.text {
     #site_wrap{ 
         grid-template-rows: 
             max-content
-            40px
+            38px
             max-content;      
     }
 }

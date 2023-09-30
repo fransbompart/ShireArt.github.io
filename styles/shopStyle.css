@@ -88,7 +88,7 @@
     #site_wrap{ 
         grid-template-rows: 
         max-content
-        50px;
+        46px;
     }
 
     .shop{
@@ -147,7 +147,14 @@
     }
 }
 
-@media screen and (max-width:300px){    
+@media screen and (max-width:300px){  
+    #site_wrap{ 
+        grid-template-rows: 
+            max-content
+            38px
+            max-content;      
+    }
+
     .image{
         height: 150px;
     } 
@@ -162,15 +169,6 @@
 
     .grid-item p{
         font-size: 0.5rem;
-    }
-}
-
-@media screen and (max-width:300px){    
-    #site_wrap{ 
-        grid-template-rows: 
-            max-content
-            40px
-            max-content;      
     }
 }
 
