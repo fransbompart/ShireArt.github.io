@@ -7,7 +7,7 @@
     grid-gap: 5px;
     grid-template-rows:
         max-content
-        104px;
+        94px;
     grid-template-areas:
         "header1 header1 header1 header1 header1"
         "header2 header2 header2 header2 header2"
@@ -72,7 +72,7 @@
     #site_wrap{
         grid-template-rows:
             max-content
-            90px;
+            85px;
     }
 }
 

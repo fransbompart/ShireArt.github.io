@@ -7,7 +7,7 @@
     grid-gap: 5px;
     grid-template-rows:
         max-content
-        104px
+        94px
         max-content;
     grid-template-areas:
         "header1 header1 header1 header1 header1"
@@ -37,7 +37,7 @@
     #site_wrap{
         grid-template-rows:
             max-content
-            90px
+            85px
             max-content;
     }
 
@@ -80,12 +80,6 @@
     }
 }
 
-@media screen and (max-width:280px) {
-    .about p{
-        font-size: 0.3rem; 
-    }
-}
-
 @media screen and (max-width:300px){    
     #site_wrap{ 
         grid-template-rows: 
@@ -94,3 +88,10 @@
             max-content;      
     }
 }
+
+@media screen and (max-width:280px) {
+    .about p{
+        font-size: 0.3rem; 
+    }
+}
+
