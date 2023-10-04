@@ -4,10 +4,9 @@
         1fr 
         repeat(3,minmax(0,300px))
         1fr;
-    grid-gap: 5px;
     grid-template-rows:
         max-content
-        94px
+        70px
         max-content;
     grid-template-areas:
         "header1 header1 header1 header1 header1"
@@ -17,12 +16,11 @@
 
 .contact{
     grid-area: contact;
-    margin-top: 2%;
 }
 
 .contact .grid-item{
     display: flex;
-    margin: 10% 2% 17%;
+    margin-bottom: 0.5rem;
     justify-self: center;
 }
 
@@ -30,24 +28,24 @@
     display: grid;
     grid-template-columns: repeat(2,minmax(0px,300px));
     place-content: center;
+    margin-top: 2rem;
 }
 
 .contact h1{
     text-align: center;
     letter-spacing: 0.5rem; 
     font-size: 2.5rem; 
-    margin-top: 2%;
+    margin-top: 0.8rem;
 }
 
 h2{
-    margin-top: 4%;
-    margin-bottom: 4%;
+    margin: 0.8rem auto;
     color: #DD6761;
     text-align: center;
 }
 
 .icon{
-    max-height: 4.6rem;
+    max-height: 4.4rem;
     border: none;
     margin-right: 4%;
 }
@@ -77,6 +75,12 @@ a.text{
     right: 1.8rem;
 }
 
+a.text2{
+    position: relative;
+    bottom: 1rem;
+    right: 0.1rem;
+}
+
 .special{
     margin-bottom: -8%;
 }
@@ -89,7 +93,7 @@ a.text{
     #site_wrap{
         grid-template-rows:
             max-content
-            85px
+            60px
             max-content;
     }
 
@@ -106,7 +110,7 @@ a.text{
     #site_wrap{
         grid-template-rows: 
             max-content
-            80px
+            55px
             max-content;
     }
 
@@ -138,7 +142,7 @@ a.text{
     }
     
     .icon{
-        height: 3.2rem;
+        height: 3rem;
         margin-right: 4%;
     }
 
@@ -146,6 +150,7 @@ a.text{
         right: 1.8rem;
         bottom: 1%;
         top: -1.7rem;
+        height: 4.9rem;
     }
     
     a.text{
@@ -157,13 +162,17 @@ a.text{
     #site_wrap{ 
         grid-template-rows: 
             max-content
-            48px
+            40px
             max-content;
         grid-gap: 5px;
     }
 }
 
 @media screen and (max-width:375px) {
+    .info{
+        grid-template-columns: repeat(2,minmax(0px,115px))
+    }
+
     .contact h1{
         font-size: 1rem;
         letter-spacing: 0.3rem;
@@ -178,30 +187,36 @@ a.text{
     }
     
     .icon{
-        height: 2rem;
-        margin-right: 2%;
+        height: 2.3rem;
     }
 
     .instagram {
         right: 0.9rem;
-        width: 35%;
+        height: 3.5rem;
         top: -1rem;
     }
 
     a.text{
         right: 0.7rem;
         top: -0.6rem;
-    }     
+    }    
+
+    a.text2{
+        left: 0.2rem;
+        top: -0.6rem;
+    }   
 }
 
-@media screen and (max-width:300px){    
+@media screen and (max-width:330px){    
     #site_wrap{ 
         grid-template-rows: 
             max-content
-            38px
+            35px
             max-content;      
     }
+}
 
+@media screen and (max-width:300px){    
     .contact h1{
         font-size: 0.85rem;
     }
@@ -215,18 +230,34 @@ a.text{
     }
 
     .info{
-        grid-template-columns: repeat(2,minmax(0px,100px))
+        grid-template-columns: repeat(2,minmax(0px,90px))
+    }
+
+    .icon{
+        height: 2rem;
     }
 
     .instagram {
         right: 0.7rem;
-        width: 50%;
-        top: -0.8rem;
+        height: 3.2rem;
     }
 
     a.text{
         right: 0.5rem;
+        top: -0.5rem;
+    }    
+
+    a.text2{
+        left: 0.15rem;
+        top: -0.5rem;
     }  
 }
 
-
+@media screen and (max-width:280px){    
+    #site_wrap{ 
+        grid-template-rows: 
+            max-content
+            30px
+            max-content;      
+    }
+}
