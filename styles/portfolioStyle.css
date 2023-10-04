@@ -4,10 +4,9 @@
         1fr 
         repeat(3,minmax(0,600px))
         1fr;
-    grid-gap: 5px;
     grid-template-rows:
         max-content
-        94px
+        70px
         repeat(10,max-content);
     grid-template-areas:
         "header1 header1 header1 header1 header1"
@@ -21,7 +20,8 @@
         "ilustrationsTitle ilustrationsTitle ilustrationsTitle ilustrationsTitle ilustrationsTitle"
         ". ilustrations ilustrations ilustrations ."
         "objectsTitle objectsTitle objectsTitle objectsTitle objectsTitle"
-        ". objects objects objects .";
+        ". objects objects objects ."
+        "shopButton shopButton shopButton shopButton shopButton";
 }
 
 .portraitsTitle{
@@ -67,13 +67,13 @@
 .portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
     letter-spacing: 0.5rem;
     text-align: center;
-    margin: 2% auto;
+    margin: 2% auto auto auto;
 }
 
 .portraits, .animals, .landscape, .ilustrations, .objects{
     display: grid;
-    grid-template-columns: repeat(3, minmax(0px, 400px));
-    row-gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0px, 320px));
+    row-gap: 0.5rem;
     place-self: center;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .grid-item img{
-    width: 60%;
+    width: 80%;
     display: block;
     margin: auto;
     align-self: center;
@@ -101,7 +101,7 @@
 }
 
 .wide img{
-    width: 76%;
+    width: 90%;
 }
 
 img.wideImg2{
@@ -110,22 +110,48 @@ img.wideImg2{
     width: 80%;
 }
 
-.grid-item p{
-    font-size: 1.4rem;
+.grid-item p, p.shopButtonText{
+    font-size: 1.25rem;
     font-weight: bold;
     text-align: center;
     place-self: center;
     margin: auto 2%;
 }
 
-.dobleText{
-    display: inline-block;
-    align-self: center;
-    margin: auto -9%;
-}
-
 p.text {
     margin: auto;
+}
+
+.shopButton{
+    grid-area: shopButton;
+    display: grid;
+    place-self: center;
+    margin: 1rem auto;
+}
+
+p.shopButtonText{
+    margin: 1% auto;
+}
+
+.shopButton a{
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 3px solid #DD6761;
+    border-radius: 50em;
+    color: #DD6761;
+    background-color: #80A66C;
+    padding: 0.3rem 1rem;
+    width: min-content;
+    position: relative;
+    display: grid;
+    margin: auto;
+    margin: 0.5rem auto 0.8rem auto;
+}
+
+.shopButton a:hover{
+    background-color: #DD6761;
+    color: #80A66C;
+    border: 3px solid #80A66C;
 }
 
 @media screen and (max-width:965px){
@@ -138,11 +164,11 @@ p.text {
     #site_wrap{
         grid-template-rows:
             max-content
-            85px
+            60px
             repeat(10,max-content);
     }
 
-    .grid-item p{
+    .grid-item p, p.shopButtonText{
         font-size: 1.2rem;       
     } 
 
@@ -159,11 +185,11 @@ p.text {
     #site_wrap{
         grid-template-rows: 
             max-content
-            80px
+            55px
             repeat(10,max-content);
     }
 
-    .grid-item p{
+    .grid-item p, p.shopButtonText{
         font-size: 1rem;       
     }
 
@@ -174,13 +200,18 @@ p.text {
     .portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
         font-size: 1.6rem;
     }
+
+    .shopButton a{
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;    
+    }
 }
 
 @media screen and (max-width:600px) {
     #site_wrap{ 
         grid-template-rows: 
             max-content
-            48px
+            40px
             repeat(10,max-content);
     }
 
@@ -189,12 +220,21 @@ p.text {
         margin: auto;      
     }    
 
+    p.shopButtonText{
+        font-size: 0.8rem;       
+    }
+
     .grid-item p.text{
         font-size: 0.6rem;
     }
 
     .portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
         font-size: 1.3rem;
+    }
+
+    .shopButton a{
+        font-size: 0.75rem;
+        padding: 0.2rem 0.6rem;    
     }
 }
 
@@ -205,26 +245,55 @@ p.text {
     }
 
     .grid-item p.text, .grid-item p{
-        font-size: 0.5rem;
+        font-size: 0.55rem;
+    }
+
+    p.shopButtonText{
+        font-size: 0.65rem;
+    }
+
+    .shopButton a{
+        font-size: 0.68rem;
+        padding: 0.18rem 0.65rem;  
+        border: 2px solid;  
     }
 }
 
 @media screen and (max-width:330px) {   
-    .portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
-        font-size: 0.9rem;
-    }
-}
-
-@media screen and (max-width:300px) {   
     #site_wrap{ 
         grid-template-rows: 
             max-content
-            38px
+            35px
             max-content;      
+    }
+
+    .portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
+        font-size: 0.9rem;
+    }
+
+    .grid-item p.text, .grid-item p{
+        font-size: 0.5rem;
+    }
+
+    p.shopButtonText{
+        font-size: 0.55rem;
+    }
+
+    .shopButton a{
+        font-size: 0.55rem;
+        padding: 0.15rem 0.45rem;  
+        margin-bottom: 0.5rem;
     }
 }
 
-@media screen and (max-width:276px) {   
+@media screen and (max-width:280px) {   
+    #site_wrap{ 
+        grid-template-rows: 
+            max-content
+            30px
+            max-content;      
+    }
+
     .portraitsTitle h1, .animalsTitle h1, .landscapeTitle h1, .ilustrationsTitle h1, .objectsTitle h1{
         font-size: 0.7rem;
         letter-spacing: 0.2rem;
@@ -235,10 +304,16 @@ p.text {
     }
 
     .grid-item p{
-        font-size: 0.4rem;
+        font-size: 0.42rem;
+    }
+
+    p.shopButtonText{
+        font-size: 0.52rem;
+    }
+
+    .shopButton a{
+        font-size: 0.46rem;
+        padding: 0.15rem 0.45rem;  
+        margin-bottom: 0.3rem
     }
 }
-
-
-
-
