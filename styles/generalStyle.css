@@ -29,6 +29,12 @@ img:hover{
     color: bisque;
 }
 
+.header2 nav ul li a:hover{
+    background-color: #DD6761;
+    border: 3px solid #f19c2d;
+    color: bisque;
+}
+
 body{
     overflow-x: hidden;
 }
@@ -44,18 +50,18 @@ body{
     font-size: 1.9rem;
     color: white;
     word-wrap: normal;
-    margin: 1.65rem 0 1.35rem 4%;
+    margin: 1.3rem 0 1rem 4%;
 }
 
 .header1 .logo{
     border: none;
-    width: 22%;
-    min-width: 100px;
+    width: 9%;
+    min-width: 125px;
     max-width: 160px;
     object-fit: contain;
     position: absolute;
     left: 1.5%;
-    top: 0.8rem;
+    top: 0.45rem;
 }
 
 .header1 .logo:hover{
@@ -98,11 +104,12 @@ body{
 @media screen and (max-width: 850px){ 
     .header1 h1{
         font-size: 1.7rem;
-        margin: 1.5rem 0 1.2rem 11%;
+        margin: 1rem 0 0.9rem 11%;
     }
 
     .header1 .logo{
-        width: 18%;
+        min-width: 110px;
+        width: 8%;
     }
 
     .header2 nav ul a{
@@ -114,28 +121,29 @@ body{
 @media screen and (max-width: 760px){      
     .header1 h1{
         font-size: 1.5rem;
-        margin: 1.2rem 0 1.1rem 11%;
+        margin: 0.9rem 0 0.7rem 11%;
     }
 
     .header1 .logo {
-        width: 16%;
+        min-width: 100px;
     }
 
     .header2 nav ul a{
         font-size: 0.83rem;
+        padding: 0.4rem 0.6rem;
     }
 } 
 
 @media screen and (max-width:600px){
     .header1 .logo{
-        max-height: 80px;
-        top: 0.7rem;
-        left: 2%
+        max-height: 75px;
+        top: 0.2rem;
+        left: 1%
     }
 
     .header1 h1{
         font-size: 1rem;
-        margin: 0.9rem 0 0.7rem 15%;
+        margin: 0.7rem 0 0.5rem 12%;
     }
 
     #menu{
@@ -157,9 +165,9 @@ body{
 
     .header2 nav ul.open{
         position: absolute;
-        top: 94px;
+        top: 78px;
         right: 2%;
-        width: 27%;
+        width: 26%;
         background-color: #F2A950;
         border: 2px solid #2A495A;
         display: flex;
@@ -186,27 +194,43 @@ body{
 }
 
 @media screen and (max-width:330px) {
+    .header1 .logo{
+        max-height: 65px;
+        top: 0.25rem;
+        left: 0%
+    }
+    
     img{
         border: 2px solid #DD6761;
     }
 
     #menu{
-        font-size: 0.58rem;
+        font-size: 0.55rem;
         font-weight: bold;
         border: 2px solid #2A495A;
-        padding: 0.18rem 0.76rem;
+        padding: 0.12rem 0.6rem;
+    }
+
+    .header2 nav ul.open{
+        top: 71px;
+        width: 30%;
+    }
+
+    .header2 nav ul a {
+        font-size: 0.6rem;
     }
 
     .header1 h1{
-        margin: 0.9rem 0 0.7rem 27%;
+        font-size: 0.9rem;
+        margin-left: 27%;
     }
 }
 
-@media screen and (max-width:300px) {
+@media screen and (max-width:280px) {
     .header1 .logo{
         min-width: 65px;
-        top: 0.65rem;
-        left: 0.9rem;
+        top: 0.2rem;
+        left: 0.4rem;
     }
 
     .header1 h1{
@@ -217,10 +241,6 @@ body{
     #menu{
         font-size: 0.5rem;
         padding: 0.15rem 0.63rem;
-    }
-
-    .header2 nav ul.open{
-        top: 80px;
     }
 
     .header2 nav ul a {
