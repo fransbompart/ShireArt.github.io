@@ -81,6 +81,12 @@ a.text2{
     right: 0.1rem;
 }
 
+a.text2{
+    position: relative;
+    bottom: 1rem;
+    right: 0.1rem;
+}
+
 .special{
     margin-bottom: -8%;
 }
